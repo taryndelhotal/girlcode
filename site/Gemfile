@@ -1,0 +1,14 @@
+ gem 'middleman'
+ gem 'mailgun-ruby', '~>1.0.5', require: 'mailgun'
+
+ group :development do
+   gem 'middleman-livereload', '~>3.4.3'
+   gem 'rubocop', require: false
+   gem 'rubocop-rspec'
+ end
+
+ group :testing do
+   gem 'rspec', '~>3.4.0'
+ end
+
+ gem 'byebug', '~>8.2.0', group: [:development, :testing]

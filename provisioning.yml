@@ -1,0 +1,31 @@
+- hosts: all
+  sudo: yes
+
+  tasks:
+  - name: Update apt cache
+    apt: update_cache=yes
+    tags: apt
+
+  - name: Upgrade all apt packages to latest version
+    apt: upgrade=yes
+    tags: apt
+
+  - name: Install version control tools
+    apt: name={{ item }} state=latest
+    with_items:
+      - git
+    tags: vcs
+
+  - name: Install vim
+    apt: name=vim state=latest
+    tags: vim
+
+  - name: Symlink vagrant to homefolder
+    file: src=/vagrant/site dest=/home/vagrant/site state=link
+
+  - name: Install build-essential
+    apt: name=build-essential state=present
+    tags: build
+
+  - name: Install bundler and install gems from Gemfile
+    bundler: state=present executable=~/.rvm/gems/ruby-{{ ruby_version }}/bin/bundle gemfile=/site/Gemfile
