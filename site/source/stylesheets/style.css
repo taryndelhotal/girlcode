@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Graphik-Medium';
-  src: url("Graphik-Medium.otf") format("opentype");
+  src: url("../fonts/Graphik-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: 'Graphik-Regular';
   font-weight: bold;
-  src: url("Graphik-Regular.otf") format("opentype");
+  src: url("../fonts/Graphik-Regular.otf") format("opentype");
 }
 
 body {
@@ -18,18 +18,25 @@ a {
   text-decoration: none
 }
 
+#grad1 {
+    background: #ffffff; /* For browsers that do not support gradients */
+    background: linear-gradient(#ffffff, rgb(255, 221, 203)); /* Standard syntax */
+    height: 200px;
+    width: 100%;
+}
+
 h2 {
   color: rgba(53, 19, 254, .81);
   font-size: 48px;
   line-height: 54px;
   font-family: 'Graphik-Regular';
   text-align: left;
-  padding: 7% 35% 0%;
+  padding: 2% 35% 0%;
   margin: 0;
 }
 
 h3 {
-  color: rgba(53, 19, 254, .81);
+  color: #ffffff;
   font-size: 48px;
   line-height: 54px;
   font-family: 'Graphik-Regular';
@@ -54,6 +61,7 @@ button {
   display: inline-block;
   cursor: pointer;
   font-family: 'Consolas';
+  letter-spacing: 2px;
   font-size: 20px;
   padding: 15px 20px;
   position: absolute;
@@ -63,16 +71,16 @@ button {
 }
 
 button.blue {
-  background-color: rgb(255, 221, 203);;
+  background-color: rgba(53, 19, 254, .1);
   border: 2px solid rgba(53, 19, 254, 1);
-  color: rgb(183,149,221);
+  color: #ffffff;
 }
 
 input {
   border: 0;
   background: transparent;
   border-bottom: 2px solid #372BFA;
-  color: rgb(183,149,221);
+  color: #ffffff;
   font-size: 20px;
   line-height: 40px;
   font-family: 'Consolas';
@@ -84,11 +92,6 @@ input {
   transform: translateX(-50%) translateY(-50%);    
 }
 
-::-webkit-input-placeholder { color: rgb(183,149,221); }
-::-moz-placeholder { color: rgb(183,149,221); } /* firefox 19+ */
-:-ms-input-placeholder { color: rgb(183,149,221); } /* ie */
-input:-moz-placeholder { color: rgb(183,149,221); }
-
 pre {
   font-family: 'Graphik-Regular';
 }
@@ -98,7 +101,7 @@ select {
   border: 0px;
   border-radius: 0px;
   border-bottom: 4px solid #372BFA;
-  color: rgb(183,149,221);
+  color: rgba(155, 155, 155, 55);
   cursor: pointer;
   font-size: 20px;
   font-family: 'Consolas';
@@ -110,14 +113,26 @@ select {
 }
 
 #header {
-  background-color: rgb(255, 221, 203);
+  background-image: url('/images/grid-background.png');
   height:692px;
   position: relative;
 }
 
+#blue_menu {
+  background-image: url('/images/menuIcon.png');
+  width: 60px;
+  height: 60px;
+}
+
+#white_menu {
+  background-image: url('/images/whiteMenuIcon.png');
+  width: 60px;
+  height: 60px;
+}
+
 #code {
-  color: rgba(53, 19, 254, .81);
-  font-family: Consolas;
+  color: #ffffff;
+  font-family: 'Consolas';
   font-size: 30px;
   line-height: 46px;
   position: absolute;
@@ -128,9 +143,10 @@ select {
 }
 
 #bigcode {
-  color: rgba(60, 26, 253, 1);
+  color: rgba(53, 19, 254, 1);
   font-family: 'Graphik-Medium';
   font-size: 250px;
+  font-weight: bold;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -138,13 +154,20 @@ select {
 }
 
 #comment {
-  color: rgba(91, 63, 254, 1);
+  color: rgba(53, 19, 254, 1);
   font-family: 'Graphik-Medium';
   font-size: 250px;
+  font-weight:bold;
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);  
+}
+
+#question1block {
+  background-color: #ffffff;
+  height:700px;
+  position: relative;
 }
 
 #question1blockpink {
@@ -154,7 +177,7 @@ select {
 }
 
 #question2block {
-  background-color: rgb(255, 221, 203);
+  background-color: rgba(53, 19, 254, .81);
   height: 700px;
   position: relative;
 }
@@ -171,7 +194,7 @@ select {
 
 #charCount {
   position: absolute;
-  color: rgb(183,149,221);
+  color: #ffffff;
   font-family: 'Consolas';
   font-size: 14px;
   line-height: 40px;
