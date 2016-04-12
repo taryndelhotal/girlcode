@@ -1,4 +1,4 @@
-# Filling the Gender Gap
+# Debugging the Gender Gap
 
 A static website which gives users information on what they can do to
 encourage diversity in the tech community.
@@ -10,4 +10,6 @@ This site is built using the Ruby-based static site generator
 
 ## Starting the project
 
-`brew install ansible`
+`cd site`  
+`bundle install`  
+`bundle exec middleman server`  
